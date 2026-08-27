@@ -158,17 +158,19 @@
       box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
     }
 
+    /* Botón Donar mejorado con alto contraste y legibilidad impecable */
     .btn-donate {
-      background: linear-gradient(135deg, #0070ba, #003087);
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
       color: #ffffff;
-      box-shadow: 0 4px 15px rgba(0, 112, 186, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      font-weight: 700;
     }
 
     .btn-donate:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 112, 186, 0.55);
-      background: linear-gradient(135deg, #0079c1, #0045ac);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.6);
+      background: linear-gradient(135deg, #3b82f6, #2563eb);
     }
 
     .btn-outline {
@@ -303,7 +305,7 @@
       text-align: justify;
     }
 
-    /* Ficha del Autor */
+    /* Ficha del Autor (Actualizada con foto de 220px y texto exacto) */
     .author-card {
       background: var(--bg-card);
       border: 1px solid var(--border-card);
@@ -636,8 +638,8 @@
         </div>
       </a>
       <nav class="nav-links">
-        <a href="#obra">La Obra</a>
         <a href="#autor">El Autor</a>
+        <a href="#obra">La Obra</a>
         <a href="#capitulos">Estructura & Capítulos</a>
         <a href="#lector" class="btn btn-gold">📖 Leer Online</a>
         <a href="https://paypal.me/spilimcurso" target="_blank" rel="noopener noreferrer" class="btn btn-donate">
@@ -660,12 +662,12 @@
           <div class="hero-btns">
             <a href="#lector" class="btn btn-gold">Comenzar Lectura Online</a>
             <a href="https://paypal.me/spilimcurso" target="_blank" rel="noopener noreferrer" class="btn btn-donate">Contribuir / Donar</a>
-            <a href="#obra" class="btn btn-outline">Ver Presentación & Prólogo</a>
+            <a href="#autor" class="btn btn-outline">Conocer al Autor</a>
           </div>
         </div>
 
         <div class="book-cover-card">
-          <img src="Portada.png" alt="Portada Un Cuaderno de Tasación" class="cover-art" onerror="this.onerror=null; this.src='Español.png';">
+          <img src="Portada_2.png" alt="Portada Un Cuaderno de Tasación" class="cover-art" onerror="this.onerror=null; this.src='Portada.png';">
           <div class="metadata-strip">
             <div><strong>Autor:</strong> Miguel Camacaro Pérez</div>
             <div><strong>ISBN:</strong> 978-980-18-4026-8</div>
@@ -673,6 +675,30 @@
             <div><strong>Editorial:</strong> MC Ediciones</div>
             <div><strong>Año:</strong> 2024 / 1ª Edición</div>
             <div><strong>Contenido:</strong> Ensayos & Artículos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre el Autor (Colocado antes de presentación y prólogo) -->
+    <section class="section-block" id="autor">
+      <div class="container">
+        <div class="author-card">
+          <div class="author-photo-frame">
+            <img 
+              src="Informal 3.png" 
+              alt="Ing. Miguel Camacaro Pérez"
+              onerror="this.onerror=null; this.src='Informal 3_2.png'; this.onerror=function(){this.src='Miguel _Camacaro.jpeg.png';};">
+          </div>
+          <div class="author-info">
+            <h3>ING. MIGUEL CAMACARO PÉREZ, M.SC.</h3>
+            <div class="degree">Ingeniero Civil – Tasador (ULA) • M.Sc. en Gerencia de Construcción (UCLA – University of Florida)</div>
+            <p class="author-bio">
+              El profesor Miguel Camacaro Pérez es un apasionado de la Ciencia de la valuación, de la Ciencia de datos y de la Inteligencia Artificial Generativa, comprometido en impulsar el crecimiento profesional de los valuadores a través de la integración de las últimas herramientas y tecnologías en su flujo de trabajo.
+            </p>
+            <div class="dedication-box">
+              <strong>Dedicado a:</strong> Los profesionales de la ingeniería y de la arquitectura que hoy forman parte de la diáspora venezolana y a los que ejercen dignamente la profesión en Venezuela, a pesar de todas las dificultades.
+            </div>
           </div>
         </div>
       </div>
@@ -708,30 +734,6 @@
                 <div class="name">Rafael Bravo Montes</div>
                 <div class="role">Prólogo de la Obra</div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Sobre el Autor -->
-    <section class="section-block" id="autor">
-      <div class="container">
-        <div class="author-card">
-          <div class="author-photo-frame">
-            <img 
-              src="Informal 3.png" 
-              alt="Ing. Miguel Camacaro Pérez"
-              onerror="this.onerror=null; this.src='Informal 3_2.png'; this.onerror=function(){this.src='Miguel _Camacaro.jpeg.png';};">
-          </div>
-          <div class="author-info">
-            <h3>ING. MIGUEL CAMACARO PÉREZ, M.SC.</h3>
-            <div class="degree">Ingeniero Civil – Tasador (ULA) • M.Sc. en Gerencia de Construcción (UCLA – University of Florida)</div>
-            <p class="author-bio">
-              Especialista en valuación de activos y profesor universitario con más de 40 años de trayectoria profesional en la ingeniería de construcción y tasación. Creador del canal <em>Mundo Valor</em> y fundador del <em>Appraisers Reading Club</em>, promueve la integración de la inferencia estadística, la Ciencia de Datos y el rigor científico en la práctica valuatoria panamericana.
-            </p>
-            <div class="dedication-box">
-              <strong>Dedicado a:</strong> Los profesionales de la ingeniería y de la arquitectura que hoy forman parte de la diáspora venezolana y a los que ejercen dignamente la profesión en Venezuela, a pesar de todas las dificultades.
             </div>
           </div>
         </div>
@@ -874,10 +876,10 @@
   </footer>
 
   <script>
-    // Configuración de PDF.js
+    // Configuración de PDF.js apuntando al nuevo archivo comprimido en GitHub
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
-    const pdfUrl = '4UnCuadernodeTasación.pdf';
+    const pdfUrl = '4UnCuadernodeTasación_Compressed.pdf';
 
     let pdfDoc = null;
     let currentLeftPage = 1;
@@ -895,7 +897,7 @@
       console.error("Error al cargar PDF:", err);
       document.getElementById('loader').innerHTML = `
         <p style="color:#ef4444; font-weight:700;">No se pudo cargar el archivo PDF.</p>
-        <p style="color:#94a3b8; font-size:0.85rem; margin-top:0.4rem;">Verifique que el archivo <strong>4UnCuadernodeTasación.pdf</strong> esté en la raíz del repositorio.</p>
+        <p style="color:#94a3b8; font-size:0.85rem; margin-top:0.4rem;">Verifique que el archivo <strong>4UnCuadernodeTasación_Compressed.pdf</strong> esté en la raíz del repositorio.</p>
       `;
     });
 
