@@ -305,7 +305,7 @@
       text-align: justify;
     }
 
-    /* Ficha del Autor (Actualizada con foto de 220px y texto exacto) */
+    /* Ficha del Autor */
     .author-card {
       background: var(--bg-card);
       border: 1px solid var(--border-card);
@@ -667,7 +667,7 @@
         </div>
 
         <div class="book-cover-card">
-          <img src="Portada_2.png" alt="Portada Un Cuaderno de Tasación" class="cover-art" onerror="this.onerror=null; this.src='Portada.png';">
+          <img src="Portada.png" alt="Portada Un Cuaderno de Tasación" class="cover-art" onerror="this.onerror=null; this.src='Español.png';">
           <div class="metadata-strip">
             <div><strong>Autor:</strong> Miguel Camacaro Pérez</div>
             <div><strong>ISBN:</strong> 978-980-18-4026-8</div>
@@ -740,7 +740,7 @@
       </div>
     </section>
 
-    <!-- Índice de Capítulos con Mapeo Exacto en PDF -->
+    <!-- Índice de Capítulos con Mapeo Exacto en PDF (Corregido con los nuevos números de página) -->
     <section class="section-block" id="capitulos">
       <div class="container">
         <div class="section-head">
@@ -749,8 +749,8 @@
         </div>
 
         <div class="fabulas-grid">
-          <!-- Mapeo exacto PDF: Pág 2 impresa = Pág 11 del PDF -->
-          <div class="fabula-card" onclick="goToPdfPage(11)">
+          <!-- Pág. 2 impresa -> Pág. 18 del PDF -->
+          <div class="fabula-card" onclick="goToPdfPage(18)">
             <div>
               <div class="f-num">CAPÍTULO I • PÁG. 2</div>
               <h4>De la estadística inferencial en la toma de decisiones</h4>
@@ -759,8 +759,8 @@
             <div class="f-btn">Leer capítulo ➔</div>
           </div>
 
-          <!-- Mapeo exacto PDF: Pág 86 impresa = Pág 95 del PDF -->
-          <div class="fabula-card" onclick="goToPdfPage(95)">
+          <!-- Pág. 86 impresa -> Pág. 102 del PDF -->
+          <div class="fabula-card" onclick="goToPdfPage(102)">
             <div>
               <div class="f-num">CAPÍTULO II • PÁG. 86</div>
               <h4>De la vinculación del AHP y los precios inmobiliarios</h4>
@@ -769,8 +769,8 @@
             <div class="f-btn">Leer capítulo ➔</div>
           </div>
 
-          <!-- Mapeo exacto PDF: Pág 137 impresa = Pág 146 del PDF -->
-          <div class="fabula-card" onclick="goToPdfPage(146)">
+          <!-- Pág. 137 impresa -> Pág. 153 del PDF -->
+          <div class="fabula-card" onclick="goToPdfPage(153)">
             <div>
               <div class="f-num">CAPÍTULO III • PÁG. 137</div>
               <h4>Del método contributivo en los avalúos inmobiliarios</h4>
@@ -779,8 +779,8 @@
             <div class="f-btn">Leer capítulo ➔</div>
           </div>
 
-          <!-- Mapeo exacto PDF: Pág 238 impresa = Pág 247 del PDF -->
-          <div class="fabula-card" onclick="goToPdfPage(247)">
+          <!-- Pág. 238 impresa -> Pág. 254 del PDF -->
+          <div class="fabula-card" onclick="goToPdfPage(254)">
             <div>
               <div class="f-num">CAPÍTULO IV • PÁG. 238</div>
               <h4>De la depreciación en las construcciones</h4>
@@ -789,8 +789,8 @@
             <div class="f-btn">Leer capítulo ➔</div>
           </div>
 
-          <!-- Mapeo exacto PDF: Pág 314 impresa = Pág 323 del PDF -->
-          <div class="fabula-card" onclick="goToPdfPage(323)">
+          <!-- Pág. 314 impresa -> Pág. 330 del PDF -->
+          <div class="fabula-card" onclick="goToPdfPage(330)">
             <div>
               <div class="f-num">CAPÍTULO V • PÁG. 314</div>
               <h4>De la ciencia de datos en la tasación</h4>
@@ -799,8 +799,8 @@
             <div class="f-btn">Leer capítulo ➔</div>
           </div>
 
-          <!-- Mapeo exacto PDF: Pág 354 impresa = Pág 363 del PDF -->
-          <div class="fabula-card" onclick="goToPdfPage(363)">
+          <!-- Pág. 354 impresa -> Pág. 370 del PDF -->
+          <div class="fabula-card" onclick="goToPdfPage(370)">
             <div>
               <div class="f-num">CAPÍTULO VI • PÁG. 354</div>
               <h4>De las aventuras del Ing. Marfel Tasable</h4>
@@ -809,8 +809,8 @@
             <div class="f-btn">Leer capítulo ➔</div>
           </div>
 
-          <!-- Mapeo exacto PDF: Pág 425 impresa = Pág 434 del PDF -->
-          <div class="fabula-card" onclick="goToPdfPage(434)">
+          <!-- Pág. 425 impresa -> Pág. 441 del PDF -->
+          <div class="fabula-card" onclick="goToPdfPage(441)">
             <div>
               <div class="f-num">CAPÍTULO VII • PÁG. 425</div>
               <h4>De los acontecimientos gremiales</h4>
@@ -876,7 +876,7 @@
   </footer>
 
   <script>
-    // Configuración de PDF.js apuntando al nuevo archivo comprimido en GitHub
+    // Configuración de PDF.js apuntando al archivo PDF comprimido subido a GitHub
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
     const pdfUrl = '4UnCuadernodeTasación_Compressed.pdf';
@@ -956,8 +956,9 @@
         isRendering = false;
         const rightPage = isMobile ? leftPage : Math.min(leftPage + 1, pdfDoc.numPages);
 
-        const displayLeft = leftPage > 9 ? `Pág. libro ${leftPage - 9}` : `Preliminar ${leftPage}`;
-        const displayRight = rightPage > 9 ? `Pág. libro ${rightPage - 9}` : `Preliminar ${rightPage}`;
+        // Desfase exacto de 16 páginas preliminares para coincidir la numeración impresa con el PDF
+        const displayLeft = leftPage > 16 ? `Pág. libro ${leftPage - 16}` : `Preliminar ${leftPage}`;
+        const displayRight = rightPage > 16 ? `Pág. libro ${rightPage - 16}` : `Preliminar ${rightPage}`;
 
         document.getElementById('page-num-indicator').innerText = isMobile 
           ? `${displayLeft} (PDF: ${leftPage} / ${pdfDoc.numPages})` 
